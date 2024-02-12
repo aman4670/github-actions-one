@@ -27,9 +27,10 @@ jobs:
 
       - name: Build Project
         run: npm run build
-       
-        - name: Netlify Deploy Site
-        uses: data-intuitive/netlify-deploy-site@v1.0.2
+        
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
-          branch: nl-pages
+          branch: gh-pages
           folder: build
